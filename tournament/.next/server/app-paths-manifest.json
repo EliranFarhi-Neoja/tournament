@@ -1,0 +1,9 @@
+{
+  "/page": "app/page.js",
+  "/display/displayscore/page": "app/display/displayscore/page.js",
+  "/display/topplayers/page": "app/display/topplayers/page.js",
+  "/display/topteams/page": "app/display/topteams/page.js",
+  "/display/duringgame/page": "app/display/duringgame/page.js",
+  "/display/individualscore/page": "app/display/individualscore/page.js",
+  "/display/teamscore/page": "app/display/teamscore/page.js"
+}
