@@ -45,13 +45,13 @@ function AllTeams() {
                             <SkeletonTeamName key={index} />
                         ))
                     ) : (
-                        teamNames.map((teamName, index) => (
-                            <Link key={index} href={`/operators/selectedteam/${teamName}`} passHref>
-                                <div>
+                        <div className="grid grid-cols-2 gap-8 auto-rows-max">
+                            {teamNames.map((teamName, index) => (
+                                <Link key={index} href={`/operators/selectedteam/${teamName}`} passHref className="h-auto">
                                     <TeamName teamName={teamName} />
-                                </div>
-                            </Link>
-                        ))
+                                </Link>
+                            ))}
+                        </div>
                     )}
                 </div>
 
@@ -61,11 +61,11 @@ function AllTeams() {
                     </div>
                 </div>
             </div>
-            <div className='absolute bottom-10 left-10'>
-                <ButtonLeft route='/operators/join' />
+            <div className='absolute bottom-10 left-10 opacity-70'>
+                <ButtonLeft />
             </div>
-            <div className='absolute bottom-10 right-10'>
-                <ButtonRight route='/operators/selectedteam' />
+            <div className='absolute bottom-10 right-10 opacity-70'>
+                <ButtonRight />
             </div>
         </div>
     );

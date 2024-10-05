@@ -628,6 +628,9 @@ video {
 .flex {
   display: flex;
 }
+.grid {
+  display: grid;
+}
 .hidden {
   display: none;
 }
@@ -814,6 +817,9 @@ video {
 .max-w-xs {
   max-width: 20rem;
 }
+.flex-shrink-0 {
+  flex-shrink: 0;
+}
 .flex-grow {
   flex-grow: 1;
 }
@@ -852,6 +858,12 @@ video {
 }
 .list-none {
   list-style-type: none;
+}
+.auto-rows-max {
+  grid-auto-rows: max-content;
+}
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .flex-row {
   flex-direction: row;
@@ -902,6 +914,11 @@ video {
 }
 .overflow-y-auto {
   overflow-y: auto;
+}
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .rounded {
   border-radius: 0.25rem;

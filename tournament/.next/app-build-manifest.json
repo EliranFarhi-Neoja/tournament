@@ -1,15 +1,25 @@
 {
   "pages": {
-    "/page": [
+    "/operators/start/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+      "static/chunks/app/operators/start/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
+    ],
+    "/operators/allteams/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/operators/allteams/page.js"
+    ],
+    "/operators/selectedteam/[name]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/operators/selectedteam/[name]/page.js"
     ],
     "/display/displayscore/page": [
       "static/chunks/webpack.js",
@@ -21,11 +31,6 @@
       "static/chunks/main-app.js",
       "static/chunks/app/display/teamscore/page.js"
     ],
-    "/display/individualscore/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/display/individualscore/page.js"
-    ],
     "/display/topteams/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -36,10 +41,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/display/topplayers/page.js"
     ],
+    "/display/duringregistration/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/display/duringregistration/page.js"
+    ],
     "/display/duringgame/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/display/duringgame/page.js"
+    ],
+    "/display/individualscore/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/display/individualscore/page.js"
     ]
   }
 }

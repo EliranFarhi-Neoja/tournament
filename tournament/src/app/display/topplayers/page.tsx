@@ -78,7 +78,7 @@ function TopPlayers() {
                 
             </div>
             <div className='absolute bottom-10 left-10'>
-                <ButtonLeft />
+                <ButtonLeft route='/display/displayscore'/>
             </div>
             <div className='absolute bottom-10 right-10'>
                 <ButtonRight />

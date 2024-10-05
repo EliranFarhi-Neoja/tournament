@@ -42,7 +42,7 @@ const DisplayScore: React.FC = () => {
                 </div>
                 <div className="absolute -top-9 -z-10 w-full max-w-md px-4">
                     <div className="bg-lightYellow p-2 md:p-3 rounded-xl shadow-xl">
-                        <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">{tournament?.name ?? "Tournament Name"}</p>
+                        <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-center truncate">{tournament?.name ?? "Tournament Name"}</p>
                     </div>
                 </div>
             </div>
