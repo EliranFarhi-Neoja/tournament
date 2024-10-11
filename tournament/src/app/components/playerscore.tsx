@@ -10,6 +10,7 @@ interface PlayerScoreProps {
         score3: number;
         score4: number;
         totalScore: number;
+        personalBest: number; // Added personalBest score
     };
     onPlayerNameUpdate: (playerId: string, newName: string) => void;
     onScoresUpdate: (playerId: string, updatedScores: any) => void;
@@ -61,12 +62,12 @@ const PlayerScore: React.FC<PlayerScoreProps> = ({ playerId, playerIndex, player
         </div>
     </div>
 
-    {['score1', 'score2', 'score3', 'score4'].map((scoreKey, index) => (
+    {['score1', 'score2', 'score3', 'score4', 'personalBest'].map((scoreKey, index) => (
         <div
             key={index}
             className={`${playerColors[playerIndex % playerColors.length]} border-gray-500 py-1 flex justify-center items-center px-7 w-20 rounded-2xl shadow-xl`}
         >
-            {isEditing ? (
+            {isEditing && scoreKey !== 'personalBest' ? (
                 <input
                     className="text-white bg-transparent text-xl font-bold py-2 w-12 text-center focus:outline-none"
                     type="number"

@@ -29,7 +29,6 @@ const teamSchema = new mongoose.Schema(
         },
         avatarName: {
             type: String,
-            required: true,
         },
         tournament: {
             type: mongoose.Schema.Types.ObjectId, 

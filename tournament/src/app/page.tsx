@@ -1,79 +1,91 @@
 'use client'
-
-import { usePathname } from 'next/navigation'
-
-// import Players from './players/start/page'
-// import QR from './players/qr/page'
-// import RegistrationForm from './players/regform/page'
-// import AvatarSelection from './players/avatarselection/page'
-// import TeamRegistered from './players/teamregistered/page'
-// import FinalLoading from './players/finalloading/page'
-
-// import Join from './operators/join/page'
-// import AllTeams from './operators/allteams/page'
-// import SelectedTeam from './operators/selectedteam/[name]/page'
-// import PlayerTurn from './operators/playerturn/page'
-// import FinalScreen from './operators/finalscreen/page'
-
-// import RegisteredTeams from './managers/registeredteams/page'
-// import MonitorTeams from './managers/monitorteams/page'
-// import LeaderBoard from './managers/leaderboard/page'
-// import Menu from './managers/menu/page'
-// import OperatorControl from './managers/operatorcontrol/page'
-// import SubmitResult from './managers/submitresult/page'
-
-// import DisplayScore from './display/displayscore/page'
-// import TeamScore from './display/teamscore/page'
-// import DuringRegistration from './display/duringregistration/page'
-// import DuringGame from './display/duringgame/page'
-// import IndividualScore from './display/individualscore/page'
-// import FinalScore from './display/topteams/page'
-// import FinalScoreTwo from './display/topplayers/page'
-// import ScanQR from './display/scanqr/page'
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
-  const pathname = usePathname()
+  const router = useRouter();
+
+  const handleManagerRegister = () => {
+    router.push('/managers/start');
+  };
+
+  const handleManagerLogin = () => {
+    router.push('/managers/login');
+  };
+
+  const handleOperatorJoin = () => {
+    router.push('/operators/start');
+  };
+
+  const handleDisplayStart = () => {
+    router.push('/display/start');
+  };
+
+  const handleDisplayQRCode = () => {
+    router.push('/display/qr');
+  };
+
+  const handleDisplayDuringRegistration = () => {
+    router.push('/display/duringregistration');
+  };
+
+  const handleDisplayDuringGame = () => {
+    router.push('/display/duringgame');
+  };
+
+  const handleDisplayScore = () => {
+    router.push('/display/displayscore');
+  };
+
   return (
-    <div className=''>
-      {/* {pathname === '/display-score' && <DisplayScore />} */}
-
-      {/* Playes */}
-
-            {/* <Players/> */}
-            {/* <IntroVideo/> */}
-            {/* <QR/> */}
-
-            {/* Phone screens below */}
-
-            {/* <RegistrationForm/> */}
-            {/* <AvatarSelection /> */}
-            {/* <TeamRegistered/> */}
-            {/* <FinalLoading/> */}
-
-        {/* Operator */}
-            {/* <Join/> */}
-            {/* <AllTeams/> */}
-            {/* <SelectedTeam/> */}
-            {/* <PlayerTurn/> */}
-            {/* <FinalScreen/> */}
-
-        {/* Manager */}
-            {/* <Menu/> */}
-            {/* <RegisteredTeams/> */}
-            {/* <MonitorTeams/> */}
-            {/* <OperatorControl/> */}
-            {/* <LeaderBoard/> */}
-            {/* <SubmitResult/> */}
-
-        {/* Main Display */}
-            {/* <DisplayScore /> */}
-            {/* <DuringRegistration/> */}
-            {/* <DuringGame/> */}
-            {/* <TeamScore/> */}
-            {/* <IndividualScore/> */}
-            {/* <FinalScore/> */}
-            {/* <FinalScoreTwo/> */}
-            {/* <ScanQR/> */}
+    <div className='h-screen text-white'>
+      <div className="flex justify-around gap-6 pt-24 px-20">
+        <div className="orange-yellow-gradient flex flex-col justify-center items-center rounded-xl pb-3 pt-4 min-w-96">
+                <div className="pt-8 pb-3">
+                    <p className="text-4xl md:text-4xl font-bold drop-shadow-2xl">Manager</p>
+                </div>
+                <div className='flex gap-4 md:gap-6 lg:gap-8 flex-col justify-start overflow-y-auto pt-8 md:pt-10 lg:pt-14 pb-8 w-full px-4 h-full'>
+                    <button onClick={handleManagerRegister} className='bg-darkOrange shadow-xl text-xl py-2 md:py-3 font-bold w-full max-w-xs mx-auto px-2 rounded-full'>
+                        Register
+                    </button>
+                    <button onClick={handleManagerLogin} className='bg-darkOrange shadow-xl text-xl py-2 md:py-3 font-bold w-full max-w-xs mx-auto px-2 rounded-full'>
+                        Login
+                    </button>
+                </div>
+          </div>
+          <div className="orange-yellow-gradient flex flex-col justify-center items-center rounded-xl pb-3 pt-4 min-w-96">
+                <div className="pt-8 pb-3">
+                    <p className="text-4xl md:text-4xl font-bold drop-shadow-2xl">Operator</p>
+                </div>
+                <div className='flex gap-4 md:gap-6 lg:gap-8 flex-col justify-start overflow-y-auto pt-8 md:pt-10 lg:pt-14 pb-8 w-full px-4 h-full'>
+                  <button onClick={handleOperatorJoin} className='bg-darkOrange shadow-xl text-xl py-2 md:py-3 font-bold w-full max-w-xs mx-auto px-2 rounded-full'>
+                        Join
+                  </button>
+                </div>
+          </div>
+          <div className="orange-yellow-gradient flex flex-col justify-center items-center rounded-xl pb-3 pt-4 min-w-96">
+                <div className="pt-8 pb-3">
+                    <p className="text-4xl md:text-4xl font-bold drop-shadow-2xl">Display</p>
+                </div>
+                <div className='flex gap-4 md:gap-6 lg:gap-8 flex-col justify-start overflow-y-auto pt-8 md:pt-10 lg:pt-14 pb-8 w-full px-4 h-full'>
+                    <button onClick={handleDisplayStart} className='bg-darkOrange shadow-xl text-xl py-2 md:py-3 font-bold w-full max-w-xs mx-auto px-2 rounded-full'>
+                        Start
+                    </button>
+                    <button onClick={handleDisplayQRCode} className='bg-darkOrange shadow-xl text-xl py-2 md:py-3 font-bold w-full max-w-xs mx-auto px-2 rounded-full'>
+                        QR Code
+                    </button>
+                    <button onClick={handleDisplayDuringRegistration} className='bg-darkOrange shadow-xl text-xl py-2 md:py-3 font-bold w-full max-w-xs mx-auto px-2 rounded-full'>
+                        During Registration
+                    </button>
+                    <button onClick={handleDisplayDuringGame} className='bg-darkOrange shadow-xl text-xl py-2 md:py-3 font-bold w-full max-w-xs mx-auto px-2 rounded-full'>
+                        During Game
+                    </button>
+                    <button onClick={handleDisplayScore} className='bg-darkOrange shadow-xl text-xl py-2 md:py-3 font-bold w-full max-w-xs mx-auto px-2 rounded-full'>
+                        Display Score
+                    </button>
+                </div>
+          </div>
+      </div>
+      
     </div>
   );
 }

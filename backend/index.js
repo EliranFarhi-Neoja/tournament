@@ -602,10 +602,13 @@ app.delete('/api/tournament/:id', async (req, res) => {
             return res.status(404).json({ message: 'Tournament not found' });
         }
 
-        res.status(200).json({ message: 'Tournament deleted successfully' });
+        // Delete teams associated with the tournament
+        await Team.deleteMany({ tournament: id });
+
+        res.status(200).json({ message: 'Tournament and associated teams deleted successfully' });
     } catch (error) {
-        console.error("Error deleting tournament:", error);
-        res.status(500).json({ message: 'Server error, unable to delete tournament' });
+        console.error("Error deleting tournament and teams:", error);
+        res.status(500).json({ message: 'Server error, unable to delete tournament and teams' });
     }
 });
 

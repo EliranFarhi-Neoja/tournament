@@ -136,7 +136,7 @@ function RegistrationForm() {
               </div>
             ))}
 
-            <div className="py-3">
+            {/* <div className="py-3">
               <input
                 type="text"
                 placeholder="Select Team Avatar"
@@ -145,7 +145,7 @@ function RegistrationForm() {
                 className="rounded-lg py-2 px-3 w-full font-bold text-gray-700"
                 required
               />
-            </div>
+            </div> */}
           </div>
 
           <div className="absolute -top-7">

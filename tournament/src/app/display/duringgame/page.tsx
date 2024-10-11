@@ -77,7 +77,7 @@ function DuringGame() {
 
     return (
         <div className="h-screen flex flex-col items-center justify-center text-white pb-20">
-            <div className="absolute top-20">
+            <div className="absolute top-6">
                 <div className="flex justify-center">
                     <div className="bg-lightYellow p-3 px-5 rounded-xl shadow-xl max-w-96">
                         <TournamentName/>
@@ -85,7 +85,7 @@ function DuringGame() {
                 </div>
             </div>
     
-            <div className="flex gap-5 w-full">
+            <div className="flex gap-5 w-full pt-14">
                 <div className="w-[50%] flex flex-col justify-center items-center">
                     <div className="bg-darkBlue bg-opacity-80 shadow-2xl rounded-xl w-[80%] py-8 h-auto flex flex-col justify-center">
                         {playingTeams.length > 0 ? (

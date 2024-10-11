@@ -16,6 +16,7 @@ interface Player {
         score3: number;
         score4: number;
         totalScore: number;
+        personalBest: number; // This field will be calculated on the frontend
     };
 }
 
@@ -32,9 +33,16 @@ const SelectedTeam = ({ params }: { params: { name: string } }) => {
         if (name) {
             try {
                 const response = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/teams/${name}/players`);
-                setPlayers(response.data.players);
+                const playersWithPersonalBest = response.data.players.map((player: Player) => ({
+                    ...player,
+                    scores: {
+                        ...player.scores,
+                        personalBest: Math.max(player.scores.score1, player.scores.score2, player.scores.score3, player.scores.score4)
+                    }
+                }));
+                setPlayers(playersWithPersonalBest);
 
-                const initialTeamTotal = response.data.players.reduce((acc: number, player: Player) => acc + player.scores.totalScore, 0);
+                const initialTeamTotal = playersWithPersonalBest.reduce((acc: number, player: Player) => acc + player.scores.totalScore, 0);
                 setTeamTotal(initialTeamTotal);
 
             } catch (err) {
@@ -88,6 +96,9 @@ const SelectedTeam = ({ params }: { params: { name: string } }) => {
                         </div>
                         <div className='w-20 text-center'>
                             <p>Score-4</p>
+                        </div>
+                        <div className='w-20 text-center'>
+                            <p>Personal best</p>
                         </div>
                         <div className='w-20 text-center'>
                             <p>Total</p>

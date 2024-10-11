@@ -1,10 +1,16 @@
 {
-  "/display/displayscore/page": "app/display/displayscore/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/display/teamscore/page": "app/display/teamscore/page.js",
-  "/display/topteams/page": "app/display/topteams/page.js",
-  "/display/topplayers/page": "app/display/topplayers/page.js",
-  "/display/duringregistration/page": "app/display/duringregistration/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/managers/registeredteams/page": "app/managers/registeredteams/page.js",
+  "/operators/selectedteam/[name]/page": "app/operators/selectedteam/[name]/page.js",
+  "/display/qr/page": "app/display/qr/page.js",
   "/display/duringgame/page": "app/display/duringgame/page.js",
-  "/display/individualscore/page": "app/display/individualscore/page.js"
+  "/page": "app/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/managers/start/page": "app/managers/start/page.js",
+  "/managers/login/page": "app/managers/login/page.js",
+  "/operators/start/page": "app/operators/start/page.js",
+  "/display/start/page": "app/display/start/page.js",
+  "/display/duringregistration/page": "app/display/duringregistration/page.js",
+  "/display/displayscore/page": "app/display/displayscore/page.js",
+  "/display/teamscore/page": "app/display/teamscore/page.js"
 }

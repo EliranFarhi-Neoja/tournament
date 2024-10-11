@@ -7,6 +7,8 @@ import React from 'react';
 import RegisteredTeam from "@/app/components/registeredteam";
 import { useTournament } from '@/app/functions/tournamentcontext';
 import TournamentName from '@/app/components/tournamentname';
+import Image from 'next/image';
+import Ball from '@/app/assets/ball.png';
 
 interface Player {
     name: string;
@@ -25,8 +27,36 @@ interface Team {
     avatarName: string;
 }
 
+interface TournamentDetails {
+    _id: string; 
+    name: string;
+    registrationStatus: string;
+    qrCodeImageUrl?: string; 
+}
 
 function DuringRegistration(){
+    const [tournamentDetails, setTournamentDetails] = useState<TournamentDetails | null>(null);
+
+    useEffect(() => {
+        const fetchTournamentDetails = async () => {
+            try {
+                const response = await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/tournaments`);
+                const tournaments: TournamentDetails[] = response.data.tournaments; 
+
+                if (tournaments.length > 0) {
+                    setTournamentDetails(tournaments[0]); 
+                } else {
+                    console.log("No tournaments found.");
+                    setTournamentDetails(null); 
+                }
+            } catch (error) {
+                console.error("Error fetching tournament details:", error);
+            }
+        };
+
+        fetchTournamentDetails();
+    }, []);
+
     const { tournament } = useTournament();
     const [teams, setTeams] = useState<Team[]>([]);
 
@@ -51,13 +81,31 @@ function DuringRegistration(){
 
     return(
         <div className="flex flex-col items-center text-white pb-10">
+            <div className='absolute right-0 top-10'>
+                {tournamentDetails && tournamentDetails.qrCodeImageUrl && tournamentDetails.registrationStatus == "Open" ? (
+                    <div className="border-8 border-stone-900 bg-white w-[20%] h-[20%] flex justify-center items-center">
+                        <div className="relative w-full h-full">
+                            <Image 
+                                src={tournamentDetails.qrCodeImageUrl} 
+                                layout="fixed"
+                                width={500}
+                                height={500}
+                                objectFit="contain"
+                                alt='QR code'
+                            />
+                        </div>
+                    </div>
+                ): null}
+            </div>
+            
             <div className="">
                 <div className="flex justify-center pt-10">
-                    <div className="bg-lightYellow p-3 px-5 rounded-xl shadow-xl max-w-96">
+                    <div className="bg-lightYellow p-3 px-5 rounded-xl shadow-xl max-w-96 flex justify-between">
                         <TournamentName/>
                     </div>
                 </div>
-                <div className="pt-3">
+                
+                <div className="pt-20">
                     <p className="text-center font-bold text-3xl">Registered Teams</p>
                 </div>
             </div>

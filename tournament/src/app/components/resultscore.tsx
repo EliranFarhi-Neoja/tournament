@@ -1,5 +1,6 @@
-
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMedal } from '@fortawesome/free-solid-svg-icons';
 
 interface ResultScoreProps {
     playerName: string;
@@ -10,10 +11,10 @@ interface ResultScoreProps {
 
 const ResultScore: React.FC<ResultScoreProps> = ({ playerName, totalScore, position, isAlternate }) => {
     const renderMedal = () => {
-        if (position === 1) return <i className="fa-solid fa-medal text-2xl text-yellow-500"></i>; 
-        if (position === 2) return <i className="fa-solid fa-medal text-2xl text-gray-300"></i>; 
-        if (position === 3) return <i className="fa-solid fa-medal text-2xl text-amber-700"></i>; 
-        if (position === 4) return <i className="fa-solid fa-medal text-2xl text-orange"></i>;
+        if (position === 1) return <FontAwesomeIcon icon={faMedal} className="text-2xl text-yellow-500"></FontAwesomeIcon>; 
+        if (position === 2) return <FontAwesomeIcon icon={faMedal} className="text-2xl text-gray-300"></FontAwesomeIcon>; 
+        if (position === 3) return <FontAwesomeIcon icon={faMedal} className="text-2xl text-amber-700"></FontAwesomeIcon>; 
+        if (position === 4) return <FontAwesomeIcon icon={faMedal} className="text-2xl text-orange"></FontAwesomeIcon>;
         return null; 
     };
 
