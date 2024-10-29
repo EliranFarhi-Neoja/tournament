@@ -52,9 +52,13 @@ const Menu: React.FC = () => {
         router.push('/managers/topteams'); 
     };
 
+    const handleAddTeams = () => {
+        router.push('/managers/addteams'); 
+    }; 
+
     return(
         <div className="h-screen flex flex-col items-center justify-center text-white">
-            <div className="relative z-0 orange-yellow-gradient w-[52%] h-[58%] flex flex-col justify-center items-center rounded-xl pb-3 pt-4">
+            <div className="relative z-0 orange-yellow-gradient w-[52%] h-[70%] flex flex-col justify-center items-center rounded-xl pb-3 pt-4">
                 <div className='flex gap-8 flex-wrap justify-center overflow-y-auto pt-14 pb-8'>
                     <button onClick={handleRegisteredTeams} className='bg-darkOrange shadow-xl text-xl py-3 font-bold w-72 px-2 rounded-full '>
                         Registered Teams
@@ -91,6 +95,9 @@ const Menu: React.FC = () => {
                     </button>
                     <button onClick={handleFinalTeams} className='bg-darkOrange shadow-xl text-xl py-3 font-bold w-72 px-2 rounded-full '>
                         Final Four Teams
+                    </button>
+                    <button onClick={handleAddTeams} className='bg-darkOrange shadow-xl text-xl py-3 font-bold w-72 px-2 rounded-full '>
+                        Add Teams
                     </button>
                 </div>
                 <div className="absolute -top-9 -z-10">

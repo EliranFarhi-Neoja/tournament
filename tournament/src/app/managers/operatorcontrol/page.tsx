@@ -37,7 +37,7 @@ const OperatorControl: React.FC = () => {
 
     const handleDelete = async (id: string) => {
         try {
-            await axios.delete(`http://localhost:8000/api/operators/${id}`);
+            await axios.delete(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/operators/${id}`);
             toast.success("Operator deleted")
             fetchOperators();  
         } catch (err) {

@@ -53,7 +53,10 @@ const Rename: React.FC<RenameProps> = ({ closeOverlay }) => {
     };
 
     return (
-        <div className="flex flex-col gap-5 px-12 py-10 items-center">
+        <div className="flex flex-col gap-5 px-12 py-10 items-center relative">
+            <div className="absolute top-0 right-0 p-2 cursor-pointer">
+                <span onClick={closeOverlay}><i className="fa-solid fa-x"></i></span>
+            </div>
             <div className="pb-5">
                 <input
                     placeholder="Enter Tournament Name"

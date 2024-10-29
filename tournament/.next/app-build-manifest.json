@@ -11,46 +11,6 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/display/displayscore/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/display/displayscore/page.js"
-    ],
-    "/display/teamscore/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/display/teamscore/page.js"
-    ],
-    "/operators/start/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/operators/start/page.js"
-    ],
-    "/operators/allteams/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/operators/allteams/page.js"
-    ],
-    "/operators/selectedteam/[name]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/operators/selectedteam/[name]/page.js"
-    ],
-    "/players/regform/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/players/regform/page.js"
-    ],
-    "/players/teamregistered/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/players/teamregistered/page.js"
-    ],
-    "/managers/start/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/managers/start/page.js"
-    ],
     "/managers/login/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -61,51 +21,50 @@
       "static/chunks/main-app.js",
       "static/chunks/app/managers/menu/page.js"
     ],
+    "/managers/operatorcontrol/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/managers/operatorcontrol/page.js"
+    ],
+    "/managers/leaderboard/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/managers/leaderboard/page.js"
+    ],
     "/managers/registeredteams/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/managers/registeredteams/page.js"
     ],
-    "/display/individualscore/page": [
+    "/managers/monitorteams/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/display/individualscore/page.js"
+      "static/chunks/app/managers/monitorteams/page.js"
     ],
-    "/display/topplayers/page": [
+    "/managers/markteams/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/display/topplayers/page.js"
+      "static/chunks/app/managers/markteams/page.js"
     ],
-    "/display/topteams/page": [
+    "/managers/topteams/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/display/topteams/page.js"
+      "static/chunks/app/managers/topteams/page.js"
     ],
-    "/display/duringregistration/page": [
+    "/managers/submitresult/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/display/duringregistration/page.js"
+      "static/chunks/app/managers/submitresult/page.js"
     ],
-    "/display/qr/page": [
+    "/managers/addteams/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/display/qr/page.js"
+      "static/chunks/app/managers/addteams/page.js"
     ],
-    "/display/duringgame/page": [
+    "/players/teamregistered/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/display/duringgame/page.js"
-    ],
-    "/display/start/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/display/start/page.css",
-      "static/chunks/app/display/start/page.js"
-    ],
-    "/_not-found/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+      "static/chunks/app/players/teamregistered/page.js"
     ]
   }
 }
