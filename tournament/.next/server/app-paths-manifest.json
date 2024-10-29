@@ -1,16 +1,12 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
+  "/managers/menu/page": "app/managers/menu/page.js",
+  "/managers/addteams/page": "app/managers/addteams/page.js",
+  "/players/teamregistered/page": "app/players/teamregistered/page.js",
   "/managers/registeredteams/page": "app/managers/registeredteams/page.js",
-  "/operators/selectedteam/[name]/page": "app/operators/selectedteam/[name]/page.js",
-  "/display/qr/page": "app/display/qr/page.js",
-  "/display/duringgame/page": "app/display/duringgame/page.js",
-  "/page": "app/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/managers/start/page": "app/managers/start/page.js",
-  "/managers/login/page": "app/managers/login/page.js",
-  "/operators/start/page": "app/operators/start/page.js",
-  "/display/start/page": "app/display/start/page.js",
-  "/display/duringregistration/page": "app/display/duringregistration/page.js",
-  "/display/displayscore/page": "app/display/displayscore/page.js",
-  "/display/teamscore/page": "app/display/teamscore/page.js"
+  "/managers/topteams/page": "app/managers/topteams/page.js",
+  "/managers/submitresult/page": "app/managers/submitresult/page.js",
+  "/managers/leaderboard/page": "app/managers/leaderboard/page.js",
+  "/managers/monitorteams/page": "app/managers/monitorteams/page.js",
+  "/managers/markteams/page": "app/managers/markteams/page.js",
+  "/managers/operatorcontrol/page": "app/managers/operatorcontrol/page.js"
 }

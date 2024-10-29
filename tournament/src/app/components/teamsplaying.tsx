@@ -66,6 +66,9 @@ const TeamsPlaying: React.FC<TeamsPlayingProps> = ({ closeOverlay }) => {
             <button onClick={closeOverlay} className='bg-darkOrange shadow-xl text-xl py-3 font-bold w-72 px-2 rounded-full '>
                 Cancel
             </button>
+            <div className="absolute top-2 right-2 p-2 cursor-pointer">
+                <span onClick={closeOverlay}><i className="fa-solid fa-x"></i></span>
+            </div>
         </div>
     );
 }

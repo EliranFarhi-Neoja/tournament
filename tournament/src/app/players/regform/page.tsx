@@ -135,17 +135,6 @@ function RegistrationForm() {
                 />
               </div>
             ))}
-
-            {/* <div className="py-3">
-              <input
-                type="text"
-                placeholder="Select Team Avatar"
-                value={avatarName}
-                onChange={(e) => setAvatarName(e.target.value)}
-                className="rounded-lg py-2 px-3 w-full font-bold text-gray-700"
-                required
-              />
-            </div> */}
           </div>
 
           <div className="absolute -top-7">

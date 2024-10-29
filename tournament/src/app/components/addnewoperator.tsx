@@ -34,40 +34,45 @@ const AddNewOperator: React.FC<AddNewOperatorProps> = ({ closeOverlay, fetchOper
       };
 
     return(
-        <form onSubmit={handleSubmit}>
-            <div className="flex flex-col gap-5 px-12 py-10 items-center">
-                
-                <div className="pb-1">
-                    <input
-                        placeholder="Enter Operator Name"
-                        type="text"
-                        className="text-center text-xl text-gray-800 py-3 w-80 rounded-xl"
-                        id="name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        required
-                />
-                </div>
-                <div className="pb-5">
-                    <input
-                        placeholder="Enter Operator Email"
-                        className="text-center text-xl text-gray-800 py-3 w-80 rounded-xl"
-                        type="email"
-                        id="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                />
-                </div>
-                <button type="submit" className='bg-darkOrange shadow-xl text-xl py-3 font-bold w-72 px-2 rounded-full '>
-                    Send Code
-                </button>
-                <button onClick={closeOverlay} className='bg-darkOrange shadow-xl text-xl py-3 font-bold w-72 px-2 rounded-full '>
-                    Cancel
-                </button>
-                
+        <div className="relative">
+            <div onClick={closeOverlay} className="absolute top-0 right-2 p-2 cursor-pointer">
+                <span><i className="fa-solid fa-x"></i></span>
             </div>
-        </form>
+            <form onSubmit={handleSubmit}>
+                <div className="flex flex-col gap-5 px-12 py-10 items-center">
+                    
+                    <div className="pb-1">
+                        <input
+                            placeholder="Enter Operator Name"
+                            type="text"
+                            className="text-center text-xl text-gray-800 py-3 w-80 rounded-xl"
+                            id="name"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <div className="pb-5">
+                        <input
+                            placeholder="Enter Operator Email"
+                            className="text-center text-xl text-gray-800 py-3 w-80 rounded-xl"
+                            type="email"
+                            id="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <button type="submit" className='bg-darkOrange shadow-xl text-xl py-3 font-bold w-72 px-2 rounded-full '>
+                        Send Code
+                    </button>
+                    <button onClick={closeOverlay} className='bg-darkOrange shadow-xl text-xl py-3 font-bold w-72 px-2 rounded-full '>
+                        Cancel
+                    </button>
+                    
+                </div>
+            </form>
+        </div>
     )
 }
 

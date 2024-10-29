@@ -1,4 +1,3 @@
-
 "use client"
 
 import { useState, useEffect } from "react";
@@ -148,6 +147,9 @@ const RegControl: React.FC<RegControlProps> = ({ closeOverlay }) => {
                     <button onClick={closeInnerOverlay} className='bg-darkOrange shadow-xl text-xl py-3 font-bold w-72 px-2 rounded-full '>
                         Cancel
                     </button>
+                    <div className="absolute top-2 right-2 p-2 cursor-pointer">
+                        <span onClick={closeInnerOverlay}><i className="fa-solid fa-x"></i></span>
+                    </div>
                 </div>
                 
             </Overlay>
@@ -175,9 +177,15 @@ const RegControl: React.FC<RegControlProps> = ({ closeOverlay }) => {
                     <button onClick={closeTournamentOverlay} className='bg-darkOrange shadow-xl text-xl py-3 font-bold w-72 px-2 rounded-full '>
                         Cancel
                     </button>
+                    <div className="absolute top-2 right-2 p-2 cursor-pointer">
+                        <span onClick={closeTournamentOverlay}><i className="fa-solid fa-x"></i></span>
+                    </div>
                 </div>
                 
             </Overlay>
+            <div onClick={closeOverlay} className="absolute top-2 right-2 p-2 cursor-pointer">
+                <span><i className="fa-solid fa-x"></i></span>
+            </div>
             <button onClick={closeOverlay} className='bg-darkOrange shadow-xl text-xl py-3 font-bold w-72 px-2 rounded-full '>
                 Cancel
             </button>
